@@ -7,3 +7,8 @@ export const setToken = (token) => ({
     type: 'SET_TOKEN',
     payload: token
 })
+
+export const setPlaylist = (playlist) => ({
+    type: 'SET_PLAYLIST',
+    payload: playlist
+})
