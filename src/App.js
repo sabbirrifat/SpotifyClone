@@ -34,6 +34,10 @@ class App extends Component {
       spotify.getUserPlaylists().then((playlist) => {
         this.props.addPlaylist(playlist)
       })
+
+      spotify.getPlaylist("37i9dQZEVXcV2sEZLLOOtQ").then((discover) => {
+        this.props.addDiscover(discover)
+      })
     }
   }
 
@@ -57,7 +61,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   addUser : (user) => dispatch(setUser(user)),
   addToken : (token) => dispatch(setToken(token)),
-  addPlaylist: (playlist) => dispatch(setPlaylist(playlist))
+  addPlaylist: (playlist) => dispatch(setPlaylist(playlist)),
+  addDiscover: (discover) => dispatch(setDiscoverWeekly(discover))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

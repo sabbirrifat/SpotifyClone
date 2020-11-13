@@ -3,8 +3,9 @@
 
 const INITIAL_STATE = {
     currentUser : null,
-    token: "fdfdfd",
-    playlists: null
+    token: "jdhfdjf",
+    playlists: null,
+    discoverWeekly: null,
 }
 
 const userReducer = (state = INITIAL_STATE, action) =>{
@@ -24,6 +25,11 @@ const userReducer = (state = INITIAL_STATE, action) =>{
             return {
                 ...state,
                 playlists: action.payload
+            }
+        case 'SET_DISCOVER_WEEKLY':
+            return {
+                ...state,
+                discoverWeekly: action.payload
             }
     
         default:

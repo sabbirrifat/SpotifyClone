@@ -9,6 +9,10 @@
     justify-content: space-between;
 }
 
+.footer-right * .MuiSlider-root {
+    color: green;
+}
+
 .footer-left {
     flex: 0.3;
     display: flex;
@@ -24,6 +28,14 @@
     object-fit: contain;
 }
 
+.footer-songInfo > h4 {
+    margin-bottom: 5px;
+}
+
+.footer-songInfo > p {
+    font-size: 12px;
+}
+
 .footer-center{
     flex: 0.4;
     padding: 0 100px;
@@ -34,10 +46,29 @@
     max-width: 300px;
 
 }
+
+.footer-icon:hover,
+.footer-green:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2) !important;
+    -webkit-transition: transform 0.2s ease-in-out;
+    -moz-transition: transform 0.2s ease-in-out;
+    -ms-transition: transform 0.2s ease-in-out;
+    -o-transition: transform 0.2s ease-in-out;
+    -webkit-transform: scale(1.2) !important;
+    -moz-transform: scale(1.2) !important;
+    -ms-transform: scale(1.2) !important;
+    -o-transform: scale(1.2) !important;
+}
+
 .footer-right {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
     flex: 0.3
+}
+
+.footer-green {
+    color: green;
 }
